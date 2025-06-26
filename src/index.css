@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Leaflet CSS import */
+@import 'leaflet/dist/leaflet.css';
+
 @layer base {
   :root {
     --background: 255 255 255;

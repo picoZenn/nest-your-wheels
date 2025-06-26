@@ -1,5 +1,6 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface User {
   id: string;
@@ -68,6 +69,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('parknest_user');
+    // Navigate to landing page after logout
+    window.location.href = '/';
   };
 
   // Check for existing user on load
